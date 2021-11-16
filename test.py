@@ -1,17 +1,3 @@
-# pyconcurrency
-
-提供了多进程加多线程的 Pool 和多进程加协程的 Pool。
-
-# 安装
-
-```bash
-git clone https://github.com/panpan-wu/pyconcurrency.git
-python setup.py install
-```
-
-# 示例
-
-```python
 import asyncio
 import time
 
@@ -38,6 +24,3 @@ if __name__ == "__main__":
     print("use asyncio")
     for result_item in pool.map(async_func, range(4)):
         print(result_item.result, result_item.exception)
-```
-
-注意：pool.map 的结果并不保证顺序。
